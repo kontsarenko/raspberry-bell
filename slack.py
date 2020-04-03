@@ -40,6 +40,10 @@ def run():
                     text = event.get('text')
                     type = event.get('type')
                     if type and type == 'message' and text:
+                        print('user')
+                        print(event.get('user'))
+                        print('channel')
+                        print(event.get('channel'))  
                         handle_message(message=text, user=event.get('user'), channel=event.get('channel'))
             time.sleep(SOCKET_DELAY)
     else:
