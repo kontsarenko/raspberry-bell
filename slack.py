@@ -35,6 +35,8 @@ def run():
         print('Slack Bot is ON')
         while True:
             event_list = valet_slack_client.rtm_read()
+            print('list')
+            print(event_list)
             if len(event_list) > 0:
                 for event in event_list:
                     text = event.get('text')
